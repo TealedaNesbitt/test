@@ -1,0 +1,43 @@
+body {
+  height: 5000px;
+}
+.left {
+  width: 50%;
+  background-color: purple;
+}
+.right {
+  width: 50%;
+  background-color: green;
+}
+.relative {
+  background-color: lightblue;
+  height: 250px;
+  padding: 30px;
+  margin: 10px;
+  display: flex;
+  /* Try changing the position property. Notice the behavior of the red box. */
+  position: relative;
+}
+.absolute {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  /* An absolutely positioned element is removed from the normal flow of content.
+  An absolute positioned element positions itself based on their nearest-positioned ancestor. If there are no positioned ancestors, that's the browser window. 
+  In this example that is the .relative class element. */
+  position: absolute;
+  /* The top, right, left, and bottom properties are used to set the distance between a position:absolute element and it's nearest-positioned ancestor.
+  Notice how the position of the red box is overlapping the purple.
+  You can use position:absolute to break elements outside of their containers to create visual interest. 
+  Try changing the values to be negative and adding the pixel unit. For example, top:-10px; */
+  top: 0;
+  left: 0;
+}
+.fixed {
+  height: 200px;
+  width: 200px;
+  background-color: green;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
